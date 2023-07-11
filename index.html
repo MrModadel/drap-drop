@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Vite App</title>
+   <link rel="stylesheet" href="./scss/style.scss">
+</head>
+
+<body>
+   <header class="header">
+      <h1>Logo</h1>
+      <button data-modal class="create">Создать</button>
+   </header>
+   <main class="main">
+      <section class="todo">
+         <h2 class="title">To do</h2>
+         <div data-cont="todo" class="todo__container container">
+            <div class="item" draggable="true">
+               <div class="item__title">Dthcnrf</div>
+               <p class="item__description">Как дела?</p>
+               <div class="populs"></div>
+            </div>
+         </div>
+      </section>
+      <section class="doing">
+         <h2 class="title">Doing</h2>
+         <div data-cont="doing" class="doing__container container">
+
+         </div>
+      </section>
+      <section class="done">
+         <h2 class="title">Done</h2>
+         <div data-cont="done" class="done__container container">
+
+         </div>
+      </section>
+   </main>
+
+
+
+
+   <div class="modal">
+      <div class="modal__dialog">
+         <div class="modal__content">
+            <form action="#" name="reg">
+               <div data-close class="modal__close">&times;</div>
+               <div class="modal__title">Как дела?</div>
+               <input required placeholder="Название" name="title" type="text" class="modal__input">
+               <input required placeholder="текст" name="description" type="phone" class="modal__input">
+               <input type="text" list="humans" placeholder="Испольнители" data-input class="modal__input">
+               <input type="text" name="portal" placeholder="места" class="modal__input" list="place">
+               <datalist id="humans">
+                  <option value="Shavkat">
+                  <option value="РАБотник">
+                  <option value="РАБотница">
+               </datalist>
+               <datalist id="place">
+                  <option value="todo">
+                  <option value="doing">
+                  <option value="done">
+               </datalist>
+               <div class="humans-box">
+               </div>
+               <button class="btn btn_dark btn_min">Создать</button>
+            </form>
+         </div>
+      </div>
+   </div>
+   <script type="module" src="/main.js"></script>
+</body>
+
+</html>

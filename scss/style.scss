@@ -1,0 +1,242 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+   height: 70px;
+   background-color: rgb(0, 45, 105);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   padding: 0 30px;
+   h1 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #ffff;
+   }
+}
+.create {
+   padding: 16px 32px;
+   border: 0;
+   background-color: #ff0000;
+   border-radius: 14px;
+   cursor: pointer;
+
+   color: #ffffff;
+   font-size: 24px;
+}
+.main {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 27px;
+   padding: 0 60px;
+
+   margin-top: 48px;
+   section {
+      width: 33.3333333%;
+      background-color: #bebebe;
+      min-height: 700px;
+      .container {
+         .item {
+            &:not(:first-child) {
+               margin-top: 20px;
+            }
+         }
+         min-height: 300px;
+         height: fit-content;
+      }
+   }
+}
+.title {
+   font-size: 27px;
+   font-weight: 800;
+   color: #14461e;
+   text-align: center;
+   margin: 30px 0;
+}
+.item {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: column;
+   gap: 30px;
+   padding: 20px;
+   border: 2.7px solid #cd4646;
+   border-radius: 16px;
+   background-color: rgb(185, 196, 172);
+   b {
+      font-size: 27px;
+      color: #517ebd;
+   }
+   p {
+      color: #517ebd;
+      font-size: 24px;
+   }
+}
+.populs {
+   display: flex;
+   justify-content:flex-start;
+   align-items: center;
+   gap: 5px;
+}
+
+.hold {
+   cursor: pointer;
+   border: solid red 4px;
+}
+
+.hovered {
+   background: gray;
+   border-style: dashed;
+}
+
+.invisible {
+   display: none;
+}
+
+.btn {
+   width: 220px;
+   height: 65px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #fff;
+   font-size: 18px;
+   font-weight: 700;
+   border: 1px solid rgba(0, 0, 0, 0.2);
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   transition: 0.3s all;
+   outline: 0;
+}
+.btn_white {
+   background-color: #fff;
+}
+.btn_dark {
+   background-color: #303030;
+   color: #fff;
+   border: none;
+}
+.btn_min {
+   height: 50px;
+}
+.btn:hover {
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1050;
+   display: none;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+.modal__dialog {
+   max-width: 500px;
+   margin: 40px auto;
+}
+.modal__content {
+   position: relative;
+   width: 100%;
+   padding: 40px;
+   background-color: #fff;
+   border: 1px solid rgba(0, 0, 0, 0.2);
+   border-radius: 4px;
+   max-height: 80vh;
+   overflow-y: auto;
+}
+.modal__close {
+   position: absolute;
+   top: 8px;
+   right: 14px;
+   font-size: 30px;
+   color: #000;
+   opacity: 0.5;
+   font-weight: 700;
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+}
+.modal__title {
+   text-align: center;
+   font-size: 22px;
+   text-transform: uppercase;
+}
+.modal__input {
+   display: block;
+   margin: 20px auto 20px auto;
+   width: 280px;
+   height: 50px;
+   background: #fff;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   border: none;
+   font-size: 18px;
+   padding: 0 20px;
+   outline: 0;
+}
+.modal .btn {
+   display: block;
+   width: 280px;
+   margin: 0 auto;
+}
+.show {
+   display: block;
+}
+.hide {
+   display: none;
+}
+.fade {
+   animation-name: fade;
+   animation-duration: 1.5s;
+}
+.humans-box {
+   margin: 20px auto 20px auto;
+   width: 280px;
+   height: 50px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   overflow-x: auto;
+   gap: 5px;
+   &::-webkit-scrollbar{
+      display: none;
+   }
+   &__item {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      align-items: flex-start;
+      gap: 20px;
+      background-color: #606060;
+      width: 80px;
+      height: 40px;
+      border-radius: 15px;
+      img{
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+         border-radius: 50%;
+      }
+   }
+
+   &__close {
+      color: #fff;
+      cursor: pointer;
+   }
+}
+
+@keyframes fade {
+   from {
+      opacity: 0.1;
+   }
+   to {
+      opacity: 1;
+   }
+}
